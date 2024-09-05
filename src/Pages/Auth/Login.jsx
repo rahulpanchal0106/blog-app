@@ -31,9 +31,9 @@ const Login = ()=>{
         setLoading(true)
         try{
             const resp = await axios.post('/login',payload)
-            toast.success('You are Logged in!')
             setCookie('authToken',resp.data.token)
-            setTimeout(()=>navigate('/'),1000)
+            toast.success('You are Logged in!')
+            navigate('/feed')
 
         }catch(e){
             console.error("Error signing up: ",e.message)
