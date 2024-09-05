@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useCookies} from "react-cookie"
-import { FaFeather, FaOutdent, FaPen, FaPenFancy, FaScroll, FaSignOutAlt } from "react-icons/fa";
+import { FaFeather, FaScroll, FaSignOutAlt } from "react-icons/fa";
 
 const NavBar = ()=>{
     const [cookies, setCookie, removeCookie] = useCookies(['authToken'])

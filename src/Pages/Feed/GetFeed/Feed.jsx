@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import NavBar from "../../../Components/NavBar/NavBar"
-import Blog from "./FeedPost"
+import Blog from "../../../Components/Feed/FeedPost"
 import axios from "axios"
 import toast, { LoaderIcon } from "react-hot-toast"
 import { useCookies } from "react-cookie"
@@ -32,7 +32,6 @@ const Feed = ()=>{
     },[])
     return (
         <div className="flex flex-col justify-start items-center">
-            {/* <div className="w-screen  overflow-y-scroll fixed flex flex-row items-center justify-center p-5 pb-15 mt-36"> */}
             <NavBar/>
             
             <div className="w-full lg:w-1/2  mt-16  flex flex-col-reverse  justify-start items-center break-words" style={{overflowWrap:'anywhere'}}>

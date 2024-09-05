@@ -2,11 +2,10 @@ import { useState } from "react"
 import TimeAgo from 'react-timeago'
 import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../../../Components/NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 import { useCookies } from "react-cookie";
 import Update from "./EditPost";
-import { FaArrowLeft, FaDotCircle, FaEdit, FaStepBackward, FaTrash } from "react-icons/fa";
+import { FaArrowLeft, FaEdit, FaTrash } from "react-icons/fa";
 
 const  Open = ({data})=>{
     const [title, setTitle] = useState(data.title);
@@ -21,6 +20,7 @@ const  Open = ({data})=>{
         e.preventDefault()
         setEditing(!isEditing)
     }
+
     const handleDelete = async (e)=>{
         e.preventDefault()
         try{
@@ -38,6 +38,7 @@ const  Open = ({data})=>{
             setDeleteLoading(false)
         }
     }
+    
     return (
         <>
             <NavBar/>

@@ -1,16 +1,12 @@
 import { useState } from "react"
-
 import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../../../Components/NavBar/NavBar";
 import { useCookies } from "react-cookie";
 
 const  Update = ({data})=>{
     const [title, setTitle] = useState(data.title);
     const [content, setContent] = useState(data.content);
     const [isLoading, setLoading] = useState(false)
-    const navigate = useNavigate();
     const [cookies, setCookie, removeCookie] = useCookies(['authToken','blogUser'])
     const authToken = cookies.authToken;
 

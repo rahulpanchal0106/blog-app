@@ -1,13 +1,11 @@
 import TimeAgo from 'react-timeago'
-import { useUser } from '../../../Contexts/UserContext'
 import axios from 'axios';
 import { useCookies } from 'react-cookie';
 import { useState } from 'react';
 import toast, { LoaderIcon } from 'react-hot-toast';
 import Update from './EditPost';
-import {FaArrowLeft, FaBeer, FaEdit, FaRegEdit, FaTrash} from 'react-icons/fa'
+import {FaArrowLeft, FaEdit, FaTrash} from 'react-icons/fa'
 import Open from './openPost';
-import { useNavigate } from 'react-router-dom';
 
 const Blog = ({data,key})=>{
     const [cookies, setCookie, removeCookie] = useCookies(['authToken','blogUser'])
@@ -16,7 +14,6 @@ const Blog = ({data,key})=>{
     const username = cookies.blogUser;
     const [isEditing, setEditing] = useState(false)
     const [isOpen, setOpen] = useState(false)
-    const navigate = useNavigate()
     const blogId = data._id;
     
     

@@ -4,8 +4,7 @@ import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import { useUser } from "../../Contexts/UserContext";
-import { FaCross, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = ()=>{
     const [username, setUsername] = useState('');
@@ -14,7 +13,6 @@ const Login = ()=>{
     const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate();
     const [cookies, setCookie, removeCookie] = useCookies(['authToken','blogUser'])
-    const {setUsername: setContextUsername} = useUser()
 
     const handleUsernameChange = (event)=>{
         setUsername(event.target.value)
