@@ -6,9 +6,9 @@ const HomePage = ()=>{
         <>
             <NavBar/>
         
-            <div className="w-screen h-screen bg-white flex flex-row justify-evenly items-center">
-                <div className="flex flex-col justify-left">
-                    <p className="w-full text-9xl px-2 py-4 ">
+            <div className="w-screen h-screen bg-white flex flex-col lg:flex-row justify-evenly items-center">
+                <div className="flex flex-col justify-left mt-28 lg:mt-0 px-5">
+                    <p className="w-full text-6xl lg:text-9xl px-2 py-4 ">
                         Human
                         <br />
                         stories & ideas
@@ -22,7 +22,7 @@ const HomePage = ()=>{
                         </button>
                     </Link>
                 </div>
-                <img src="/bg.svg" alt="" width={400} />
+                <img src="/bg.svg" alt="" className="w-80 lg:w-96" />
             </div>
         
         </>

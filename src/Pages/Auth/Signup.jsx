@@ -16,6 +16,11 @@ const Signup = ()=>{
     const navigate = useNavigate();
 
     const handleUsernameChange = (event)=>{
+        if(/^\d+$/.test(event.target.value)){
+            console.error("Not allowed");
+            toast.error("username cannot be a number")
+            return;
+        }
         setUsername(event.target.value)
     }
     const handleNameChange = (event)=>{
@@ -69,7 +74,7 @@ const Signup = ()=>{
                         Sign Up to BlogApp
                     </p>
                     <input type="text" required onChange={handleNameChange} className="w-full px-5 py-3 mb-2 text-lg rounded-full border border-solid border-black" placeholder="Name" />
-                    <input type="text" required onChange={handleUsernameChange} className="w-full px-5 py-3 mb-2 text-lg rounded-full border border-solid border-black" placeholder="Username" />
+                    <input type="text" value={username} required onChange={handleUsernameChange} className="w-full px-5 py-3 mb-2 text-lg rounded-full border border-solid border-black" placeholder="Username" />
                     <div className="flex w-full flex-row items-center justify-center">
                         <input required type={showPass?"text":"password"} onChange={handlePasswordChange} className="w-full px-5 py-3 mb-2 text-lg rounded-full border border-solid border-black" placeholder="Password" />
                         
