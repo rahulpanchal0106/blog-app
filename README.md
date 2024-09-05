@@ -1,8 +1,9 @@
-# React + Vite
+# Steps to follow for FE Local Environment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  Make sure you already have blog-app-server listening on port 3000, if not then go through [these](https://github.com/rahulpanchal0106/blog-app-server/blob/main/README.md) steps.
+-  And get outside of the server repo
+-  Clone the FE repo ``` git clone https://github.com/rahulpanchal0106/blog-app-client.git ```
+- Go to the FE directory ``` cd blog-app-client ```
+- Install the depenencies ``` npm install ```
+- ⚠️⚠️⚠️ IMPORTANT: Add the .env file having ``` VITE_SERVER="http://localhost:3000" ```
+- Start the server ``` npm run dev ``` and go to the vite local server, generally at ``` http://localhost:5173/ ```
