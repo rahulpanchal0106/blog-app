@@ -14,7 +14,7 @@ const App = ()=> {
   const [cookies, setCookie, removeCookie] = useCookies(['authToken'])
   const auth = cookies.authToken;
 
-  axios.defaults.baseURL="http://localhost:3000"
+  axios.defaults.baseURL=import.meta.env.VITE_SERVER
 
   const router = createBrowserRouter([
     {path:'/',element:!auth?<HomePage/>:<Feed/>},
