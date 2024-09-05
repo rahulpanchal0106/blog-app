@@ -42,7 +42,7 @@ const  Open = ({data})=>{
         <>
             <NavBar/>
             <div className="w-screen h-full top-10 lg:top-6 bg-white fixed flex flex-col items-center justify-start px-5">
-                <div className="px-5 w-full lg:w-3/4 py-10 h-full flex flex-col justify-center items-center ">
+                <div className="px-0 lg:px-5 w-full lg:w-3/4 py-10 h-full flex flex-col justify-center items-center ">
                     <div className="w-full px-5 py-3 mb-2 text-2xl lg:text-3xl font-bold outline-none ">
                         {title}
                     </div>

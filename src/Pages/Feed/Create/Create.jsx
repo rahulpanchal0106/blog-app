@@ -52,7 +52,7 @@ const  Create = ()=>{
         <>
             <NavBar/>
             <div className="w-screen h-full bg-white fixed flex flex-col items-center justify-start px-5">
-                <form action="" onSubmit={handleSubmit} className="px-5 w-3/4 py-10 h-full flex flex-col justify-center items-center ">
+                <form action="" onSubmit={handleSubmit} className="px-5 w-full lg:w-3/4 py-10 h-full flex flex-col justify-center items-center ">
                     <p className="text-4xl mb-7">
                         Make a Blog!
                     </p>
