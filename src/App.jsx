@@ -18,11 +18,10 @@ const App = ()=> {
 
   const router = createBrowserRouter([
     {path:'/',element:!auth?<HomePage/>:<Feed/>},
-    {path:'/feed',element:<Feed/>},
+    {path:'/feed',element:!auth?<Login/>:<Feed/>},
     {path:'/login',element:<Login/>},
     {path:'/signup',element:<Signup/>},
-    {path:'/create',element:<Create/>},
-    // {path:'/',element:<Login/>},
+    {path:'/create',element:!auth?<Login/>:<Create/>},
   ])
   return (
     <>
