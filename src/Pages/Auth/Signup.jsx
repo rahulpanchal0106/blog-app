@@ -2,7 +2,7 @@ import { useState } from "react"
 import NavBar from "../../Components/NavBar/NavBar"
 import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = ()=>{
@@ -63,7 +63,7 @@ const Signup = ()=>{
     return (
         <>
             <NavBar/>
-            <div className="w-screen h-full bg-red-200 fixed top-16 flex flex-col items-center justify-start px-5">
+            <div className="w-screen h-full bg-white fixed top-16 flex flex-col items-center justify-start px-5">
                 <form action="" onSubmit={handleSubmit} className="px-5 py-10 h-full flex flex-col justify-center items-center ">
                     <p className="text-4xl mb-7">
                         Sign Up to BlogApp
@@ -87,6 +87,9 @@ const Signup = ()=>{
                     <button type="submit" className="w-1/2 flex flex-row items-center justify-evenly rounded-full border border-solid border-gray-400 px-5 py-3 hover:border-black bg-gray-100 hover:bg-black hover:text-white text-black" >
                         {isLoading?<LoaderIcon/>:''}Sign Up
                     </button>
+                    <p className="mt-20">
+                        Already have an account? <Link to="/login">Log In</Link>
+                    </p>
                 </form>
             </div>
         </>
