@@ -17,7 +17,7 @@ const App = ()=> {
   axios.defaults.baseURL="http://localhost:3000"
 
   const router = createBrowserRouter([
-    {path:'/',element:auth?<HomePage/>:<Feed/>},
+    {path:'/',element:!auth?<HomePage/>:<Feed/>},
     {path:'/feed',element:<Feed/>},
     {path:'/login',element:<Login/>},
     {path:'/signup',element:<Signup/>},
