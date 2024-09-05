@@ -35,7 +35,7 @@ const Feed = ()=>{
             {/* <div className="w-screen  overflow-y-scroll fixed flex flex-row items-center justify-center p-5 pb-15 mt-36"> */}
             <NavBar/>
             
-            <div className="w-1/2  mt-16  flex flex-col-reverse justify-start items-center">
+            <div className="w-full lg:w-1/2  mt-16  flex flex-col-reverse justify-start items-center">
                 {
                     feedData && !isLoading && feedData.length>0?
                     feedData.map((blog,i)=><Blog data={blog} key={i} />)

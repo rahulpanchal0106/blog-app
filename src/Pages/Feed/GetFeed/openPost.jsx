@@ -41,10 +41,9 @@ const  Open = ({data})=>{
     return (
         <>
             <NavBar/>
-            <div className="w-screen h-full top-6 bg-white fixed flex flex-col items-center justify-start px-5">
-                <div className="px-5 w-3/4 py-10 h-full flex flex-col justify-center items-center ">
-                    
-                    <div className="w-full px-5 py-3 mb-2 text-3xl font-bold outline-none ">
+            <div className="w-screen h-full top-10 lg:top-6 bg-white fixed flex flex-col items-center justify-start px-5">
+                <div className="px-5 w-full lg:w-3/4 py-10 h-full flex flex-col justify-center items-center ">
+                    <div className="w-full px-5 py-3 mb-2 text-2xl lg:text-3xl font-bold outline-none ">
                         {title}
                     </div>
                     <div className="w-full flex justify-between items-center text-gray-500">
@@ -90,7 +89,7 @@ const  Open = ({data})=>{
                     <div className="w-full flex justify-center items-center ">
                         <div className="border border-gray-200 border-solid w-2/3"></div>
                     </div>
-                    <div className="text-xl w-full h-2/3 overflow-y-scroll  outline-none px-5 py-3 mb-5" 
+                    <div className="lg:text-xl text-md w-full h-2/3 overflow-y-scroll  outline-none px-5 py-3 mb-5" 
                         style={{
                             whiteSpace: 'pre-wrap',
                         }}
@@ -101,10 +100,10 @@ const  Open = ({data})=>{
             </div>
             {
                 isEditing&&<div className='fixed top-20 ' style={{
-                    left:"20%"
+                    left:window.innerWidth<650?"5%":"25%"
                 }}>
                     <Update data={data} />
-                    <button onClick={handleUpdate} className='p-5 bg-gray-100 rounded-full fixed'><FaArrowLeft/></button>
+                    <button onClick={handleUpdate} className='p-5 bg-gray-100 rounded-full fixed z-50'><FaArrowLeft/></button>
                 </div>
             }
 

@@ -50,7 +50,7 @@ const  Update = ({data})=>{
 
     return (
         
-        <div className="w-1/2 h-2/3 bg-white fixed flex flex-col drop-shadow-2xl rounded-3xl items-center justify-start px-5">
+        <div className="w-10/11 lg:w-1/2 h-2/3 bg-white fixed flex flex-col drop-shadow-2xl rounded-3xl items-center justify-start px-5">
             <form action="" onSubmit={handleSubmit} className="px-5 w-full py-10 h-full flex flex-col justify-center items-center ">
                 <p className="text-4xl mb-7">
                     Update the Blog
