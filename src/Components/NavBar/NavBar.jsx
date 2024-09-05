@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useCookies} from "react-cookie"
+import { FaFeather, FaOutdent, FaPen, FaPenFancy, FaScroll, FaSignOutAlt } from "react-icons/fa";
 
 const NavBar = ()=>{
     const [cookies, setCookie, removeCookie] = useCookies(['authToken'])
@@ -11,7 +12,7 @@ const NavBar = ()=>{
     }
     return(
         <div className="z-50 fixed bg-white w-screen h-16 flex flex-row items-center justify-between px-10 py-5">
-            <div className="text-4xl">
+            <div className="text-xl lg:text-4xl w-40">
                 <Link to="/">
                     BlogApp
                 </Link>
@@ -33,17 +34,17 @@ const NavBar = ()=>{
                 )
                 :(<div className="flex flex-row justify-evenly items-center w-96">
                     <Link to="/feed">
-                        <button className="hover:underline">
-                            Feed
+                        <button className="p-2 rounded-full hover:bg-gray-200">
+                            <FaScroll/>
                         </button>
                     </Link>
                     <Link to="/create">
-                        <button className="hover:underline">
-                            Create
+                        <button className="p-2 rounded-full hover:bg-gray-200">
+                            <FaFeather/>
                         </button>
                     </Link>
-                    <button onClick={()=>logout() } className="hover:underline">
-                        Logout
+                    <button onClick={()=>logout() } className="p-2 rounded-full hover:bg-gray-200">
+                        <FaSignOutAlt color="red"/>
                     </button>
                     
                 </div>)
