@@ -6,7 +6,7 @@ const NavBar = ()=>{
     const auth = cookies.authToken;
 
     return(
-        <div className="z-50 fixed w-screen h-16 flex flex-row items-center justify-between px-10 py-5">
+        <div className="z-50 fixed bg-white w-screen h-16 flex flex-row items-center justify-between px-10 py-5">
             <div className="text-4xl">
                 <Link to="/">
                     BlogApp
@@ -30,7 +30,7 @@ const NavBar = ()=>{
                 :(<div className="flex flex-row justify-evenly items-center w-96">
                     <Link to="/feed">
                         <button className="hover:underline">
-                            Home
+                            Feed
                         </button>
                     </Link>
                     <Link to="/create">

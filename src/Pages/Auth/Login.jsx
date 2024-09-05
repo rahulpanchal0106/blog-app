@@ -4,6 +4,7 @@ import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { useUser } from "../../Contexts/UserContext";
 
 const Login = ()=>{
     const [username, setUsername] = useState('');
@@ -12,6 +13,7 @@ const Login = ()=>{
     const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate();
     const [cookies, setCookie, removeCookie] = useCookies(['authToken'])
+    const {setUsername: setContextUsername} = useUser()
 
     const handleUsernameChange = (event)=>{
         setUsername(event.target.value)
@@ -28,6 +30,7 @@ const Login = ()=>{
             username: username,
             password: password
         }
+        setContextUsername(username)
         setLoading(true)
         try{
             const resp = await axios.post('/login',payload)
