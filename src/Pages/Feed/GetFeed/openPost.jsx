@@ -41,33 +41,26 @@ const  Open = ({data})=>{
     return (
         <>
             <NavBar/>
-            <div className="w-screen h-full top-10 lg:top-6 bg-white fixed flex flex-col items-center justify-start px-5">
-                <div className="px-0 lg:px-5 w-full lg:w-3/4 py-10 h-full flex flex-col justify-center items-center ">
+            <div className="w-screen h-full top-0 mt-10 lg:mt-4 pt-10 lg:top-6 overflow-y-scroll bg-white fixed flex flex-col items-center justify-start px-5">
+                <div className="px-0 lg:px-5 w-full lg:w-3/4 py-10  flex flex-col justify-center items-center ">
                     <div className="w-full px-5 py-3 mb-2 text-2xl lg:text-3xl font-bold outline-none ">
                         {title}
                     </div>
-                    <div className="w-full flex justify-between items-center text-gray-500">
-                        <div className="w-full flex flex-col justify-left items-left px-5 py-3 mb-2 text-sm  outline-none ">
-                            <div className="flex flex-row items-center justify-left ">
-                                <div className="flex flex-row items-center justify-evenly w-40">
-                                    <p className="text-black">
-                                        <b>{data.author.name}</b>
-                                        <div className="text-xs">
-                                            <div className="text-xs">
-                                                {
-                                                    <TimeAgo date={data.createdAt}/>
-                                                }</div>
-                            
-                                        </div>
-                                    </p>
-                                    <p className="mb-2">.</p>
-                                    <p className="text-xs">{data.author.username}</p>
+                    <div className="w-full flex justify-between items-center text-gray-500 px-4">    
+                        <div className="flex flex-row items-center justify-evenly w-40">
+                            <p className="text-black">
+                                <b>{data.author.name}</b>
+                                <div className="text-xs">
+                                    <div className="text-xs">
+                                        {
+                                            <TimeAgo date={data.createdAt}/>
+                                        }</div>
+                    
                                 </div>
-
-                            </div>
-                            
+                            </p>
+                            <p className="mb-2">.</p>
+                            <p className="text-xs">{data.author.username}</p>
                         </div>
-                        
                         <div className='w-40'>
                             {
                                 data.author.username === username?
@@ -86,10 +79,10 @@ const  Open = ({data})=>{
                             }
                         </div>
                     </div>
-                    <div className="w-full flex justify-center items-center ">
+                    <div className="w-full flex justify-center mt-4 items-center ">
                         <div className="border border-gray-200 border-solid w-2/3"></div>
                     </div>
-                    <div className="lg:text-xl text-md w-full h-2/3 overflow-y-scroll  outline-none px-5 py-3 mb-5" 
+                    <div className="lg:text-xl text-md w-full  overflow-y-scroll  outline-none px-5 py-3 mb-5" 
                         style={{
                             whiteSpace: 'pre-wrap',
                         }}

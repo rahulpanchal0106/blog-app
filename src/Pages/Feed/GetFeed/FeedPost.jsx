@@ -50,7 +50,7 @@ const Blog = ({data,key})=>{
     
 
     return (
-        <div key={key} className="bg-white flex flex-col w-full px-5 py-3 mt-3 rounded-2xl ">
+        <div key={key} className="bg-white flex flex-col w-full px-5 py-3 mt-3 rounded-2xl break-words " style={{overflowWrap:'anywhere'}}>
             <div className="mb-3 text-xs">
                 {data.author.name || "Name"} 
             </div>
