@@ -54,11 +54,11 @@ const  Open = ({data})=>{
                                     <p className="text-black">
                                         <b>{data.author.name}</b>
                                         <div className="text-xs">
-                                            <div className="text-xs">{
+                                            <div className="text-xs">
+                                                {
                                                     <TimeAgo date={data.createdAt}/>
                                                 }</div>
-                                                {/* <button>Upvote</button>
-                                                <button>Comment</button> */}
+                            
                                         </div>
                                     </p>
                                     <p className="mb-2">.</p>

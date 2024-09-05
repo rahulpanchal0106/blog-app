@@ -3,6 +3,7 @@ import NavBar from "../../Components/NavBar/NavBar"
 import axios from "axios";
 import toast, { LoaderIcon } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = ()=>{
     const [username, setUsername] = useState('');
@@ -75,10 +76,10 @@ const Signup = ()=>{
                     </div>
                     <div className="flex w-full flex-row items-center justify-center mb-2 ">
                         <input required type={showPass?"text":"password"} onChange={handleConfirmPassChange} className="w-full px-5 py-3 text-lg rounded-full border border-solid border-black" placeholder="Confirm Password" />
-                        <button onClick={handleShowPassword} > 
+                        <button onClick={handleShowPassword} className="ml-5" > 
                             {
                                 !showPass?
-                                "👁️":"✖️"
+                                <FaEye/>:<FaEyeSlash/>
                             }
                         </button>
                     </div>

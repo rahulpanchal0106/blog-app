@@ -5,6 +5,7 @@ import toast, { LoaderIcon } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useUser } from "../../Contexts/UserContext";
+import { FaCross, FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = ()=>{
     const [username, setUsername] = useState('');
@@ -61,11 +62,11 @@ const Login = ()=>{
                     </p>
                     <input type="text" required onChange={handleUsernameChange} className="w-full px-5 py-3 mb-2 text-lg rounded-full border border-solid border-black" placeholder="Username" />
                     <div className="flex w-full flex-row items-center justify-center mb-2">
-                        <input required type={showPass?"text":"password"} onChange={handlePasswordChange} className="w-full px-5 py-3 text-lg rounded-full border border-solid border-black" placeholder="Confirm Password" />
-                        <button onClick={handleShowPassword} > 
+                        <input required type={showPass?"text":"password"} onChange={handlePasswordChange} className="w-full px-5 py-3 text-lg rounded-full border border-solid border-black" placeholder="Password" />
+                        <button onClick={handleShowPassword} className="ml-5" > 
                             {
                                 !showPass?
-                                "👁️":"✖️"
+                                <FaEye/>:<FaEyeSlash/>
                             }
                         </button>
                     </div>
