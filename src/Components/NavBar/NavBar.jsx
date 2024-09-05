@@ -12,7 +12,7 @@ const NavBar = ()=>{
     }
     return(
         <div className="z-50 fixed bg-white w-screen h-16 flex flex-row items-center justify-between px-10 py-5">
-            <div className="text-xl lg:text-4xl w-40">
+            <div className="text-xl font-bold md:text-4xl lg:text-4xl w-40">
                 <Link to="/">
                     BlogApp
                 </Link>
