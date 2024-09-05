@@ -65,8 +65,6 @@ const Blog = ({data,key})=>{
                     <div>{
                         <TimeAgo date={data.createdAt}/>
                     }</div>
-                    {/* <button>Upvote</button>
-                    <button>Comment</button> */}
                 </div>
                 <div className='w-40'>
                     {
@@ -92,7 +90,7 @@ const Blog = ({data,key})=>{
             </div>
 
             {
-                isEditing&&<div className='absolute top-20 left-30 '>
+                isEditing&&<div className='absolute top-20 left-2 md:left-30 lg:left-1/2 '>
                     <Update data={data} />
                     <button onClick={handleUpdate} className='p-5 bg-gray-100 rounded-full fixed'><FaArrowLeft/></button>
                 </div>

@@ -43,7 +43,7 @@ const  Open = ({data})=>{
             <NavBar/>
             <div className="w-screen h-full top-0 mt-10 lg:mt-4 pt-10 lg:top-6 overflow-y-scroll bg-white fixed flex flex-col items-center justify-start px-5">
                 <div className="px-0 lg:px-5 w-full lg:w-3/4 py-10  flex flex-col justify-center items-center ">
-                    <div className="w-full px-5 py-3 mb-2 text-2xl lg:text-3xl font-bold outline-none ">
+                    <div className="w-full px-5 py-3 mb-2 text-4xl lg:text-3xl font-bold outline-none ">
                         {title}
                     </div>
                     <div className="w-full flex justify-between items-center text-gray-500 px-4">    
@@ -92,11 +92,9 @@ const  Open = ({data})=>{
                 </div>
             </div>
             {
-                isEditing&&<div className='fixed top-20 ' style={{
-                    left:window.innerWidth<650?"5%":"25%"
-                }}>
+                isEditing&&<div className='fixed top-20 left-2 lg:left-1/2 ' >
                     <Update data={data} />
-                    <button onClick={handleUpdate} className='p-5 bg-gray-100 rounded-full fixed z-50'><FaArrowLeft/></button>
+                    <button onClick={handleUpdate} className='p-5 bg-gray-100 rounded-full fixed z-50 '><FaArrowLeft/></button>
                 </div>
             }
 
