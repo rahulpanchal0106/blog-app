@@ -5,6 +5,10 @@ const NavBar = ()=>{
     const [cookies, setCookie, removeCookie] = useCookies(['authToken'])
     const auth = cookies.authToken;
 
+    const logout = ()=>{
+        removeCookie('blogUser')
+        removeCookie('authToken')
+    }
     return(
         <div className="z-50 fixed bg-white w-screen h-16 flex flex-row items-center justify-between px-10 py-5">
             <div className="text-4xl">
@@ -38,7 +42,7 @@ const NavBar = ()=>{
                             Create
                         </button>
                     </Link>
-                    <button onClick={()=>removeCookie('authToken') } className="hover:underline">
+                    <button onClick={()=>logout() } className="hover:underline">
                         Logout
                     </button>
                     
