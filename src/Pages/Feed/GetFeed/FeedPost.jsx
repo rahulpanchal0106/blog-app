@@ -99,7 +99,7 @@ const Blog = ({data,key})=>{
             {
                 isOpen&&<div className='absolute top-0 left-0 '>
                     <Open data={data} />
-                    <button onClick={handleOpen} className='p-5 bg-gray-100 z-40 top-16 lg:top-20 left-5 lg:left-10 rounded-full fixed'><FaArrowLeft/></button>
+                    <button onClick={handleOpen} className='p-5 bg-gray-100 top-16 lg:top-20 left-5 lg:left-10 rounded-full fixed z-10 '><FaArrowLeft/></button>
                 </div>
 
             }
