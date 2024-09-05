@@ -7,6 +7,7 @@ import toast, { LoaderIcon } from 'react-hot-toast';
 import Update from './EditPost';
 import {FaArrowLeft, FaBeer, FaEdit, FaRegEdit, FaTrash} from 'react-icons/fa'
 import Open from './openPost';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = ({data,key})=>{
     const [cookies, setCookie, removeCookie] = useCookies(['authToken','blogUser'])
@@ -15,7 +16,7 @@ const Blog = ({data,key})=>{
     const username = cookies.blogUser;
     const [isEditing, setEditing] = useState(false)
     const [isOpen, setOpen] = useState(false)
-
+    const navigate = useNavigate()
     const blogId = data._id;
     
     
@@ -29,6 +30,7 @@ const Blog = ({data,key})=>{
                 }
             })
             toast.success("Blog Deleted")
+            window.location.reload()
         }catch(e){
             console.error("Error deleting blog: ",e.messa)
             toast.error(e.response.data.message || "Could not delete the blog" )

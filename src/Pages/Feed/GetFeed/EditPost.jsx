@@ -37,7 +37,7 @@ const  Update = ({data})=>{
                 }
             })
             toast.success('Blog Updated!')
-            setTimeout(()=>navigate('/'),1000)
+            setTimeout(()=>window.location.reload(),1000)
 
         }catch(e){
             console.error("Error signing up: ",e.message)
