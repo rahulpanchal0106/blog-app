@@ -41,7 +41,7 @@ const Login = ()=>{
 
         }catch(e){
             console.error("Error signing up: ",e.message)
-            toast.error(e.response.data.message || "Failed to signup")
+            toast.error(e.response?.data.message || "Failed to signup")
         }finally{
             setLoading(false)
         }
