@@ -12,7 +12,7 @@ const Login = ()=>{
     const [isLoading, setLoading] = useState(false)
     const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate();
-    const [cookies, setCookie, removeCookie] = useCookies(['authToken'])
+    const [cookies, setCookie, removeCookie] = useCookies(['authToken','blogUser'])
     const {setUsername: setContextUsername} = useUser()
 
     const handleUsernameChange = (event)=>{
@@ -30,7 +30,7 @@ const Login = ()=>{
             username: username,
             password: password
         }
-        setContextUsername(username)
+        setCookie('blogUser',username)
         setLoading(true)
         try{
             const resp = await axios.post('/login',payload)
